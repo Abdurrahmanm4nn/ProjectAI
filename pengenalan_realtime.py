@@ -43,7 +43,7 @@ le = pickle.loads(open(args["le"], "rb").read())
 
 # inisialisasi aliran video, lalu biarkan sensor kamera dimulai
 print("[INFO] mulai streaming video...")
-vs = VideoStream(src=3).start()
+vs = VideoStream().start()
 #vs = cv2.VideoCapture(args["video"])
 time.sleep(2.0)
 
