@@ -1,5 +1,5 @@
-# USAGE
-# python buat_dataset.py --dataset dataset --embeddings output/embeddings.pickle --detector programming_mojokerto --embedding-model openface_nn4.small2.v1.t7
+# CARA MENJALANKAN
+# python buat_dataset.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detector --embedding-model openface_nn4.small2.v1.t7
 
 # impor paket yang diperlukan
 from imutils import paths
@@ -12,14 +12,26 @@ import os
 
 # membangun parser argumen dan parsing argumen
 ap = argparse.ArgumentParser()
+
+# Lokasi dataset gambar
 ap.add_argument("-i", "--dataset", required=True,
 	help="path to input directory of faces + images")
+
+# Lokasi output embedding
 ap.add_argument("-e", "--embeddings", required=True,
 	help="path to output serialized db of facial embeddings")
+
+# Lokasi detector wajah
 ap.add_argument("-d", "--detector", required=True,
 	help="path to OpenCV's deep learning face detector")
+
+# Lokasi deep learning face embedding model
 ap.add_argument("-m", "--embedding-model", required=True,
 	help="path to OpenCV's deep learning face embedding model")
+
+# memastikan bahwa deteksi dengan probabilitas terbesar juga
+# berarti uji probabilitas minimum kami (dengan demikian membantu menyaring
+# deteksi lemah)
 ap.add_argument("-c", "--confidence", type=float, default=0.5,
 	help="minimum probability to filter weak detections")
 args = vars(ap.parse_args())

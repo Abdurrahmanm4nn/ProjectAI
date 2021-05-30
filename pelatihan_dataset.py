@@ -1,4 +1,4 @@
-# USAGE
+# CARA MENJALANKAN
 # python pelatihan_dataset.py --embeddings output/embeddings.pickle --recognizer output/recognizer.pickle --le output/le.pickle
 
 # impor paket yang diperlukan

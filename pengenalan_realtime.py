@@ -1,5 +1,5 @@
-# USAGE
-# python pengenalan_realtime.py --detector programming_mojokerto --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
+# CARA MENJALANKAN
+# python pengenalan_realtime.py --detector face_detector --embedding-model openface_nn4.small2.v1.t7 --recognizer output/recognizer.pickle --le output/le.pickle
 
 # import the necessary packages
 from imutils.video import VideoStream
