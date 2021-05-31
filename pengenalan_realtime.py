@@ -4,13 +4,13 @@
 # import the necessary packages
 from imutils.video import VideoStream
 from imutils.video import FPS
-import numpy as np
-import argparse
-import imutils
-import pickle
-import time
-import cv2
-import os
+import numpy as np #ngolah array
+import argparse #argumen 
+import imutils #image processing
+import pickle #menyimpan data da
+import time #ngitung waktu
+import cv2 #open.cv (yg traing)
+import os #path
 
 # construct the argument parser and parse the arguments
 ap = argparse.ArgumentParser()

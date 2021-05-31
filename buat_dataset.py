@@ -37,7 +37,6 @@ ap.add_argument("-c", "--confidence", type=float, default=0.5,
 args = vars(ap.parse_args())
 
 # muat detektor wajah bersambung kami dari disk
-print("[INFO] memuat Mojokerto Programing...")
 print("[INFO] memuat detektor wajah...")
 protoPath = os.path.sep.join([args["detector"], "deploy.prototxt"])
 modelPath = os.path.sep.join([args["detector"],
