@@ -1,3 +1,5 @@
+# Code ini dimaksudkan untuk memproses dataset sebelum melakukan pelatihan
+
 # CARA MENJALANKAN
 # python buat_dataset.py --dataset dataset --embeddings output/embeddings.pickle --detector face_detector --embedding-model openface_nn4.small2.v1.t7
 
